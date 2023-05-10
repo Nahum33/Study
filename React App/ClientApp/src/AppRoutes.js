@@ -1,20 +1,21 @@
-import { Counter } from "./components/Counter";
-import { FetchData } from "./components/FetchData";
-import { Home } from "./components/Home";
+import React, { Component } from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-const AppRoutes = [
-  {
-    index: true,
-    element: <Home />
-  },
-  {
-    path: '/counter',
-    element: <Counter />
-  },
-  {
-    path: '/fetch-data',
-    element: <FetchData />
+import Home from './components/Home/Home';
+import Counter from './components/Counter/Counter';
+import FetchData from './components/FetchData/FetchData';
+
+export default class AppRoutes extends Component {
+
+  render() {
+    return (
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/counter" element={<Counter />} />
+          <Route path="/fetch-data" element={<FetchData />} />
+        </Routes>
+      </BrowserRouter>
+    );
   }
-];
-
-export default AppRoutes;
+}
