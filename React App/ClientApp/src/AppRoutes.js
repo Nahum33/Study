@@ -13,7 +13,7 @@ export default class AppRoutes extends Component {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/counter" element={<Counter />} />
-          <Route path="/fetch-data" element={<FetchData />} />
+          <Route path="/about" element={<FetchData />} />
         </Routes>
       </BrowserRouter>
     );

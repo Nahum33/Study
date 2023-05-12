@@ -14,7 +14,7 @@ namespace React_App.Extensions
         /// <returns></returns>
         public static IServiceCollection AddHttpClientServices(this IServiceCollection services)
         {
-            services.AddHttpClient<IUserService, UserService>(config =>
+            services.AddHttpClient<IProductService, ProductService>(config =>
             {
                 // Injection of new HttpClient Instance with a new base url for the UserService
                 config.BaseAddress = new Uri("https://api.github.com");

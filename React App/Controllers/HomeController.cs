@@ -8,31 +8,30 @@ namespace React_App.Controllers
     [Route("[controller]")]
     public class HomeController : Controller
     {
-        private readonly IUserService _userService;
+        private readonly IProductService _productService;
 
         /// <summary>
         /// Example Controller to handle request from home component.
         /// </summary>
-        /// <param name="userService"> injection user service</param>
-        public HomeController(IUserService userService)
+        /// <param name="productService"> injection product service</param>
+        public HomeController(IProductService productService)
         {
-            _userService = userService;
+            _productService = productService;
         }
 
         /// <summary>
         /// GET Method to get the initial values for the home component
         /// </summary>
-        /// <param name="identifier"> user identifier</param>
         /// <returns>response format API</returns>
         [HttpGet]
-        [Route("GetInitialData/{identifier?}")]
-        public async Task<IResult?> GetInitialData(string? identifier)
+        [Route("GetInitialData")]
+        public async Task<IResult?> GetInitialData()
         {
-            var response = await _userService.GetUserByIdentifier(identifier);
+            var products = await _productService.GetAllProducts();
 
-            return response is not null 
-                ? Results.Ok(new { user = response })
-                : Results.NotFound(new { message = $"User with identifier {identifier} not found." });
+            return products is not null 
+                ? Results.Ok(new { products = products })
+                : Results.NotFound(new { message = $"Information not available at this moment" });
         }
     }
 }
