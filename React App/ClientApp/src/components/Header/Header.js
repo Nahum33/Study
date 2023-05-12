@@ -9,7 +9,6 @@ export default class Header extends Component {
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/counter">Counter</a></li>
-          <li><a href="/fetch-data">Fetch-Data</a></li>
         </ul>
       </nav>
     );
