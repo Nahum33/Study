@@ -1,14 +1,28 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
+import { createStore, combineReducers } from 'redux';
+import { Provider } from 'react-redux';
 
-import AppRoutes from './AppRoutes';
 import Header from './components/Header/Header';
+import AppRoutes from './AppRoutes';
 import Footer from './components/Footer/Footer';
 
-const appRoutes = createRoot(document.querySelector('[data-app-component]'));
-const header = createRoot(document.querySelector('[data-header-component]'));
-const footer = createRoot(document.querySelector('[data-footer-component]'));
+import productsReducer from './components/Products/Reducers';
 
-header.render(<Header />);
-appRoutes.render(<AppRoutes />);
-footer.render(<Footer />);
+const rootReducer = combineReducers({
+  products: productsReducer
+});
+const store = createStore(rootReducer);
+
+/*console.log(store.getState());
+store.subscribe(() => console.log('store', store.getState()))
+store.dispatch({ type: 'FETCH_PRODUCTS_REQUEST' });*/
+
+const appRoutesComponent = createRoot(document.querySelector('[data-app-component]'));
+const headerComponent = createRoot(document.querySelector('[data-header-component]'));
+const footerComponent = createRoot(document.querySelector('[data-footer-component]'));
+
+headerComponent.render(<Header />);
+appRoutesComponent.render(<Provider store={store}><AppRoutes /></Provider>);
+footerComponent.render(<Footer />);
+
