@@ -2,8 +2,17 @@ import React, { Component } from 'react';
 import Products from '../../components/Products/Products';
 
 export default class Home extends Component {
+  constructor({ store }) {
+    super();
+    this.store = store
+  }
+
+  componentDidMount() {
+    this.store.dispatch({ type: 'FETCH_PRODUCTS_REQUEST' });
+  }
 
   render() {
+
     return (
       <section>
         <header>
@@ -13,13 +22,7 @@ export default class Home extends Component {
 
         <hr />
 
-        <Products />
-
-        <ul>
-          <li><a href='/'>Example 1</a></li>
-          <li><a href='/'>Example 2</a></li>
-          <li><a href='/'>Example 3</a></li>
-        </ul>
+        <Products store={ this.store } />
 
       </section>
     );

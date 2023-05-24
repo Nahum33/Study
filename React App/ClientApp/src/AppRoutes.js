@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import store from './Store';
 
 import Home from './components/Home/Home';
 import Counter from './components/Counter/Counter';
@@ -11,7 +12,7 @@ export default class AppRoutes extends Component {
     return (
       <BrowserRouter>
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route exact path="/" element={<Home store={store} />} />
           <Route path="/counter" element={<Counter />} />
           <Route path="/about" element={<FetchData />} />
         </Routes>
