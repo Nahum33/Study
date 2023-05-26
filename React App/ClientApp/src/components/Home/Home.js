@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
+import store from '../../Store';
 import Products from '../../components/Products/Products';
+import { fetchProductsRequest } from '../../components/Products/Actions';
 
 export default class Home extends Component {
-  constructor({ store }) {
-    super();
-    this.store = store
-  }
 
   componentDidMount() {
-    this.store.dispatch({ type: 'FETCH_PRODUCTS_REQUEST' });
+    store.dispatch(fetchProductsRequest());
   }
 
   render() {
@@ -17,13 +15,10 @@ export default class Home extends Component {
       <section>
         <header>
           <h1>Verdifrut</h1>
-          <p>Podés pedir los productos verdifrut que ves a continuación, lo más fresco de verduras y frutas hasta la puerta de tu casa.</p>
+          <p>Podï¿½s pedir los productos verdifrut que ves a continuaciï¿½n, lo mï¿½s fresco de verduras y frutas hasta la puerta de tu casa.</p>
         </header>
-
         <hr />
-
-        <Products store={ this.store } />
-
+        <Products />
       </section>
     );
   }

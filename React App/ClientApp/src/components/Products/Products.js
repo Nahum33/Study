@@ -1,25 +1,22 @@
 import React, { Component } from 'react';
 import Product from "./Product";
+import store from '../../Store';
 
 export default class Products extends Component {
-  constructor({ store }) {
-    super();
-    this.store = store
-    this.state = {
-      products: store.getState().productsReducer.products
-    };
-  }
+  state = {
+    products: store.getState().productsReducer.products
+  };
 
   handleStoreChange = () => {
-    this.setState({ products: this.store.getState().productsReducer.products });
+    this.setState({ products: store.getState().productsReducer.products });
   }
   
   componentDidMount() {
-    this.store.subscribe(this.handleStoreChange);
+    store.subscribe(this.handleStoreChange);
   }
 
   componentWillUnmount() {
-    this.store.unsubscribe(this.handleStoreChange);
+    store.unsubscribe(this.handleStoreChange);
   }
 
   render() {

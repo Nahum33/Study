@@ -24,14 +24,14 @@ namespace React_App.Controllers
         /// </summary>
         /// <returns>response format API</returns>
         [HttpGet]
-        [Route("GetInitialData")]
-        public async Task<IResult?> GetInitialData()
+        [Route("GetProducts")]
+        public async Task<IResult?> GetProducts()
         {
             var products = await _productService.GetAllProducts();
 
-            return products is not null 
+            return products is not null
                 ? Results.Ok(new { products = products })
-                : Results.NotFound(new { message = $"Information not available at this moment" });
+                : Results.NotFound(new { message = "NOT_PRODUCTS_AVAILABLE" });
         }
     }
 }
