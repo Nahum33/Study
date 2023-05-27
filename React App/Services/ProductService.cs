@@ -27,24 +27,28 @@ namespace React_App.Services
             {
                 new Product()
                 {
+                    Id = "P1",
                     Name = "Piña",
                     Price = 2000,
                     Thumbnail = "test"
                 },
                 new Product
                 {
+                    Id = "P2",
                     Name = "Manzana",
                     Price = 1000,
                     Thumbnail = "test"
                 },
                 new Product()
                 {
+                    Id = "P3",
                     Name = "Naranja",
                     Price = 500,
                     Thumbnail = "test"
                 },
                 new Product()
                 {
+                    Id = "P4",
                     Name = "Melón",
                     Price = 1500,
                     Thumbnail = "test"
@@ -60,7 +64,7 @@ namespace React_App.Services
                 });
                 return products;
             }
-            
+
             return products;
         }
     }
