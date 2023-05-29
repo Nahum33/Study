@@ -8,7 +8,8 @@ export default class Products extends Component {
   };
 
   handleStoreChange = () => {
-    this.setState({ products: store.getState().productsReducer.products });
+    const productsFromStore = store.getState().productsReducer.products;
+    this.setState({ products: productsFromStore });
   }
   
   componentDidMount() {

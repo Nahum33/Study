@@ -9,6 +9,10 @@ export const fetchProductsSuccess = (products)  => {
   return { type: 'FETCH_PRODUCTS_SUCCESS', payload: products };
 };
 
+export const updateProducts = (products)  => { 
+  return { type: 'UPDATE_PRODUCTS', payload: products };
+};
+
 export const fetchProductsFailure = (error) => {
   const errorCode = ERROR_CODES[error];
   return { type: 'FETCH_PRODUCTS_FAILURE', payload: errorCode };
@@ -16,7 +20,7 @@ export const fetchProductsFailure = (error) => {
 
 /**
  * productsMiddleware: function to separate the side effects for products fetching
- * @param {*} store global store
+ * @param {object} store global store
  * @returns an action.
  */
 export function productsMiddleware(store) {

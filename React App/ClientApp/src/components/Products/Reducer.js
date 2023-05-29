@@ -16,6 +16,10 @@ export default function rootReducer(state = initialState, action) {
       isFetchingResults: false,
       errorCode: null
     }),
+    UPDATE_PRODUCTS: (state, action) => ({
+      ...state,
+      products: action.payload
+    }),
     FETCH_PRODUCTS_FAILURE: (state, action) => ({
       ...state,
       isFetchingResults: false,
