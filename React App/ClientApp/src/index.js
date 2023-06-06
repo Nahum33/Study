@@ -1,8 +1,8 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import Header from './components/Header/Header';
+import Header from './Components/Header/Header';
 import AppRoutes from './AppRoutes';
-import Footer from './components/Footer/Footer';
+import Footer from './Components/Footer/Footer';
 
 
 const headerComponent = createRoot(document.querySelector('[data-header-component]'));

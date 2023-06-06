@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ProductSelector from '../ProductSelector/ProductSelector';
+import ProductSelector from '../../Features/ProductSelector/ProductSelector';
 
 export default class Home extends Component {
 

@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import store from '../../Store';
-import Products from '../Products/Products';
-import FilterBar from '../FilterBar/FilterBar';
-import sortByPropertyAndSearchTerm from '../Utils/ListSorterHelper';
-import { fetchProductsRequest, updateProducts } from '../Products/Actions';
+import store from '../../Redux/Store';
+import Products from '../../Components/Products/Products';
+import FilterBar from '../../Components/FilterBar/FilterBar';
+import sortByPropertyAndSearchTerm from '../../Components/Utils/ListSorterHelper';
+import { fetchProductsRequest, updateProducts } from '../../Components/Products/Actions';
 
 export default class ProductSelector extends Component {
 
