@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Product from "./Product";
-import store from '../../Redux/Store';
+import store from '../../redux/Store';
 
 export default class Products extends Component {
   state = {

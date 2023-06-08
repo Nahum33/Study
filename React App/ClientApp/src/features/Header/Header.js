@@ -8,8 +8,7 @@ export default class Header extends Component {
       <nav>
         <ul>
           <li><a href="/">Home</a></li>
-          <li><a href="/about">Acerca de Nosotros</a></li>
-          <li><a href="/counter">Counter</a></li>
+          <li><a href="/about-us">Acerca de Nosotros</a></li>
         </ul>
       </nav>
     );

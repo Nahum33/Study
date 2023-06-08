@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import ProductSelector from '../../Features/ProductSelector/ProductSelector';
+import ProductSelector from '../../features/ProductSelector/ProductSelector';
+import ProductBasket from '../../features/ProductBasket/ProductBasket';
 
 export default class Home extends Component {
 
@@ -12,6 +13,7 @@ export default class Home extends Component {
         </header>
         <hr />
         <ProductSelector/>
+        <ProductBasket/>
       </section>
     );
   }
