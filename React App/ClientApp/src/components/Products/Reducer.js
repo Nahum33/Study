@@ -1,5 +1,6 @@
 ﻿const initialState = {
   products: [],
+  chosenProducts: [],
   isFetchingResults: false,
   errorCode: null
 };
@@ -19,6 +20,10 @@ export default function rootReducer(state = initialState, action) {
     UPDATE_PRODUCTS: (state, action) => ({
       ...state,
       products: action.payload
+    }),
+    ADD_SELECTED_PRODUCT: (state, action) => ({
+      ...state,
+      chosenProducts: [...state.chosenProducts, action.payload],
     }),
     FETCH_PRODUCTS_FAILURE: (state, action) => ({
       ...state,

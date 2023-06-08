@@ -1,10 +1,10 @@
 /**
- * sortObjectsByPropertyAndSearchTerm: function to sort a list of objects
+ * getSortedObjectsListByPropertyAndSearchTerm: function to sort a list of objects
  * based on a property name and a search term value.
  * @param {Object} settings 
  * @returns a sorted list of objects.
  */
-function sortObjectsByPropertyAndSearchTerm(settings) {
+function getSortedObjectsListByPropertyAndSearchTerm(settings) {
   const searchTerm = settings.searchTerm;
   const objectList = settings.objectList;
   const propertyName = settings.propertyName;
@@ -29,4 +29,4 @@ function sortObjectsByPropertyAndSearchTerm(settings) {
   return objectList;
 }
 
-export default sortObjectsByPropertyAndSearchTerm;
+export default getSortedObjectsListByPropertyAndSearchTerm;

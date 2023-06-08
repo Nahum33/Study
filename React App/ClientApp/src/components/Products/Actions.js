@@ -18,6 +18,10 @@ export const fetchProductsFailure = (error) => {
   return { type: 'FETCH_PRODUCTS_FAILURE', payload: errorCode };
 };
 
+export const addSelectedProduct = (product) => {
+  return { type: 'ADD_SELECTED_PRODUCT', payload: product };
+};
+
 /**
  * productsMiddleware: function to separate the side effects for products fetching
  * @param {object} store global store
