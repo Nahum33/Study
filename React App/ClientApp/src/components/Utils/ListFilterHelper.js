@@ -1,15 +1,8 @@
 /**
- * 
- * @param {Object} settings
- * @returns 
+ * getListWithUpdatedPropertyByIdList: update a specific value from object that are contained on an idList
+ * @param {*} settings 
+ * @returns list of object
  */
-export const  getDifferenceListFromTwoLists = (settings) => {
-  const listA = settings.listA;
-  const listB = settings.listB;
-  const difference = [...listA.filter(itemA => !listB.some(itemB => itemA.id === itemB.id)), ...listB.filter(itemB => !listA.some(itemA => itemB.id === itemA.id))];
-  return difference;
-};
-
 export const getListWithUpdatedPropertyByIdList = (settings)  => { 
   const objectList = settings.objectList;
   const propertyName = settings.propertyName;

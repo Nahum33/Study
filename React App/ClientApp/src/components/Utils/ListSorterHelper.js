@@ -4,7 +4,7 @@
  * @param {Object} settings 
  * @returns a sorted list of objects.
  */
-function getSortedObjectsListByPropertyAndSearchTerm(settings) {
+export const getSortedObjectsListByPropertyAndSearchTerm = (settings) => {
   const searchTerm = settings.searchTerm;
   const objectList = settings.objectList;
   const propertyName = settings.propertyName;
@@ -27,6 +27,4 @@ function getSortedObjectsListByPropertyAndSearchTerm(settings) {
   });
   
   return objectList;
-}
-
-export default getSortedObjectsListByPropertyAndSearchTerm;
+};
