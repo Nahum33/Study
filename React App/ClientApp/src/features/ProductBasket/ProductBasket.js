@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import BasketProductItems from '../../components/BasketProductItems/BasketProductItems';
 
 export default class ProductBasket extends Component {

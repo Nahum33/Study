@@ -14,9 +14,9 @@ export default class FilterBar extends Component {
     return (
         <div>
           <input
-            type="text"
+            type='text'
             onChange={this.handleInputChange}
-            placeholder="Search for products"
+            placeholder='Search for products'
           />
         </div>
     );

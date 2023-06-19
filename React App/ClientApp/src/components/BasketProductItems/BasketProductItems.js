@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import BasketProductItem from "./BasketProductItem";
+import BasketProductItem from './BasketProductItem';
 import store from '../../redux/Store';
 
 export default class BasketProductItems extends Component {
@@ -13,11 +13,11 @@ export default class BasketProductItems extends Component {
   }
   
   componentDidMount() {
-    store.subscribe(this.handleStoreChange);
+    this.unsubscribeHandleStoreChange = store.subscribe(this.handleStoreChange);
   }
 
   componentWillUnmount() {
-    store.unsubscribe(this.handleStoreChange);
+    this.unsubscribeHandleStoreChange();
   }
 
   render() {

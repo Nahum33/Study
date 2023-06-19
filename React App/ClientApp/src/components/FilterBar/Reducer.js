@@ -1,8 +1,8 @@
 ﻿const initialState = {
-  searchTerm: ""
+  searchTerm: ''
 };
 
-export default function rootReducer(state = initialState, action) {
+export default function filterBarReducer(state = initialState, action) {
   const actionHandlers = {
     ON_FILTER_BAR_CHANGE: (state, action) => ({
       ...state,

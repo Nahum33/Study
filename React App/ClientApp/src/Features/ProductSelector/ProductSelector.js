@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import store from '../../redux/Store';
 import Products from '../../components/Products/Products';
 import FilterBar from '../../components/FilterBar/FilterBar';
@@ -15,7 +15,7 @@ export default class ProductSelector extends Component {
     const sortedProductsList = getSortedObjectsListByPropertyAndSearchTerm({
       searchTerm: searchTermFromStore,
       objectList: productsFromStore,
-      propertyName: "name"
+      propertyName: 'name'
     });
 
     if(!isEqualLists({ listA: sortedProductsList, listB: productsFromStore})){
@@ -29,7 +29,7 @@ export default class ProductSelector extends Component {
     const productsIdListToUpdate = chosenProductsFromStore.map(obj => obj.id);
     const updatedProductsList = getListWithUpdatedPropertyByIdList({
       objectList: productsFromStore,
-      propertyName: "isSelected",
+      propertyName: 'isSelected',
       value: true,
       filterIdList: productsIdListToUpdate
     });
@@ -40,14 +40,14 @@ export default class ProductSelector extends Component {
   }
 
   componentDidMount() {
-    store.subscribe(this.handleSearchTermChange.bind(this));
-    store.subscribe(this.handleChosenProductsChange.bind(this));
+    this.unsubscribeSearchTerm = store.subscribe(this.handleSearchTermChange.bind(this));
+    this.unsubscribeChosenProducts = store.subscribe(this.handleChosenProductsChange.bind(this));
     store.dispatch(fetchProductsRequest());
   }
 
   componentWillUnmount() {
-    store.unsubscribe(this.unsubscribeSearchTerm);
-    store.unsubscribe(this.unsubscribeChosenProducts);
+    this.unsubscribeSearchTerm();
+    this.unsubscribeChosenProducts();
   }
 
   render() {

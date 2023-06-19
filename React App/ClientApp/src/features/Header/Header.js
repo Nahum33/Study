@@ -1,32 +1,49 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './Header.css';
 
 export default class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      menuOpen: false,
+      isNavOpen: false,
+      activeLink: new URL(window.location.href).pathname
     };
   }
 
   toggleMenu = () => {
     this.setState((prevState) => ({
-      menuOpen: !prevState.menuOpen,
+      isNavOpen: !prevState.isNavOpen,
     }));
   }
 
+  handleLinkClick = (event) => {
+    const targetLink = event.currentTarget;
+    const url = new URL(targetLink.href);
+    this.setState({
+      activeLink: url.pathname,
+    });
+  }
+
   render() {
-    const { menuOpen } = this.state;
+    const { isNavOpen, activeLink } = this.state;
 
     return (
-      
-      <nav className={menuOpen ? 'topnav responsive' : 'topnav'} id="myTopnav">
-        <a className='active' href="/">Home</a>
-        <a href="/about-us">Acerca de Nosotros</a>
-        <button className="icon" onClick={this.toggleMenu}>
-          <i class="fa fa-bars"></i>
-        </button>
-      </nav>
+      <header className='header'>
+        <nav className={isNavOpen ? 'header-nav responsive' : 'header-nav'}>
+          <ul className='nav-list'>
+            <li className={activeLink === '/' ? 'active' : ''}>
+              <Link onClick={this.handleLinkClick} to='/'>Inicio</Link>
+            </li>
+            <li className={activeLink === '/about-us' ? 'active' : ''}>
+              <Link onClick={this.handleLinkClick} to='/about-us'>Contactos</Link>
+            </li>
+          </ul>
+          <button className='nav-hamburger-button' onClick={this.toggleMenu}>
+            <i className='fa fa-bars'></i>
+          </button>
+        </nav>
+      </header>
     );
   }
 }
