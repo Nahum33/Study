@@ -1,8 +1,8 @@
 import React from 'react';
 import store from '../../redux/Store';
-import { addSelectedProduct } from '../../components/Products/Actions';
+import { addSelectedProduct } from '../../redux/actions/ProductsActions';
 
-class BasketProductItem extends React.Component {
+class SelectedProduct extends React.Component {
   state = {
     product: this.props.product
   };
@@ -23,4 +23,4 @@ class BasketProductItem extends React.Component {
   }
 }
 
-export default BasketProductItem;
+export default SelectedProduct;

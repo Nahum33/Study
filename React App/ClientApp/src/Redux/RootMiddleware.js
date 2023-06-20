@@ -1,5 +1,5 @@
 import { applyMiddleware } from 'redux';
-import { productsMiddleware } from '../components/Products/Actions';
+import { productsMiddleware } from './middlewares/productsMiddleware';
 
 const composedMiddleware = applyMiddleware(productsMiddleware);
 

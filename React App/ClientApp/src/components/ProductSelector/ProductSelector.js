@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import store from '../../redux/Store';
-import Products from '../../components/Products/Products';
-import FilterBar from '../../components/FilterBar/FilterBar';
-import { getSortedObjectsListByPropertyAndSearchTerm } from '../../components/Utils/ListSorterHelper';
-import { isEqualLists } from '../../components/Utils/ListCompareHelper';
-import { getListWithUpdatedPropertyByIdList } from '../../components/Utils/ListFilterHelper';
-import { fetchProductsRequest, updateProducts } from '../../components/Products/Actions';
+import Products from '../Products/Products';
+import FilterBar from '../FilterBar/FilterBar';
+import { getSortedObjectsListByPropertyAndSearchTerm } from '../../utils/ListSorterHelper';
+import { isEqualLists } from '../../utils/ListCompareHelper';
+import { getListWithUpdatedPropertyByIdList } from '../../utils/ListFilterHelper';
+import { fetchProductsRequest, updateProducts } from '../../redux/actions/ProductsActions';
 
 export default class ProductSelector extends Component {
 
@@ -23,10 +23,10 @@ export default class ProductSelector extends Component {
     }
   }
 
-  handleChosenProductsChange(){
+  SelectedProductsChange(){
     const productsFromStore = store.getState().productsReducer.products;
-    const chosenProductsFromStore = store.getState().productsReducer.chosenProducts;
-    const productsIdListToUpdate = chosenProductsFromStore.map(obj => obj.id);
+    const selectedProductsFromStore = store.getState().productsReducer.selectedProducts;
+    const productsIdListToUpdate = selectedProductsFromStore.map(obj => obj.id);
     const updatedProductsList = getListWithUpdatedPropertyByIdList({
       objectList: productsFromStore,
       propertyName: 'isSelected',
@@ -41,13 +41,13 @@ export default class ProductSelector extends Component {
 
   componentDidMount() {
     this.unsubscribeSearchTerm = store.subscribe(this.handleSearchTermChange.bind(this));
-    this.unsubscribeChosenProducts = store.subscribe(this.handleChosenProductsChange.bind(this));
+    this.unsubscribeSelectedProducts = store.subscribe(this.SelectedProductsChange.bind(this));
     store.dispatch(fetchProductsRequest());
   }
 
   componentWillUnmount() {
     this.unsubscribeSearchTerm();
-    this.unsubscribeChosenProducts();
+    this.unsubscribeSelectedProducts();
   }
 
   render() {

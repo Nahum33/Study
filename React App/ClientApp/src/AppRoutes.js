@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
-import Home from './pages/Home/Home';
-import AboutUs from './pages/AboutUs/AboutUs';
-import Header from './features/Header/Header';
-import Footer from './features/Footer/Footer';
+import Home from './components/Sections/Home/Home';
+import AboutUs from './components/Sections/AboutUs/AboutUs';
+import Header from './components/Sections/Header/Header';
+import Footer from './components/Sections/Footer/Footer';
 const history = createBrowserHistory();
 
 export default class AppRoutes extends Component {

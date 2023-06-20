@@ -1,6 +1,6 @@
 import React from 'react';
 import store from '../../redux/Store';
-import { addSelectedProduct } from '../../components/Products/Actions';
+import { addSelectedProduct } from '../../redux/actions/ProductsActions';
 
 const Product = ({ product }) => {
   const handleProductSelect = (product) => {

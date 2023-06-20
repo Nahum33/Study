@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import productsReducer from '../components/Products/Reducer';
-import filterBarReducer from '../components/FilterBar/Reducer';
+import productsReducer from './reducers/ProductsReducer';
+import filterBarReducer from './reducers/FilterBarReducer';
 
 const rootReducer = combineReducers({
   productsReducer: productsReducer,

@@ -1,6 +1,6 @@
 ﻿const initialState = {
   products: [],
-  chosenProducts: [],
+  selectedProducts: [],
   isFetchingResults: false,
   errorCode: null
 };
@@ -23,7 +23,7 @@ export default function productsReducer(state = initialState, action) {
     }),
     ADD_SELECTED_PRODUCT: (state, action) => ({
       ...state,
-      chosenProducts: [...state.chosenProducts, action.payload],
+      selectedProducts: [...state.selectedProducts, action.payload],
     }),
     FETCH_PRODUCTS_FAILURE: (state, action) => ({
       ...state,
