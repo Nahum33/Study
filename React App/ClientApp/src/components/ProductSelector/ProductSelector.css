@@ -1,0 +1,28 @@
+.produc-selector {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  display: block
+}
+
+.produc-selector  .filter-bar {
+  padding: 0;
+  margin: 0;
+  width: 90%;
+  margin-left: 5%;
+  overflow: hidden;
+  position: relative;
+  display: block;
+}
+
+.produc-selector  .products {
+    padding: 0;
+    margin: 0;
+    width: 90%;
+    margin-left: 5%;
+    overflow: hidden;
+    position: relative;
+    display: block;
+  }

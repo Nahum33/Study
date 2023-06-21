@@ -6,6 +6,7 @@ import { getSortedObjectsListByPropertyAndSearchTerm } from '../../utils/ListSor
 import { isEqualLists } from '../../utils/ListCompareHelper';
 import { getListWithUpdatedPropertyByIdList } from '../../utils/ListFilterHelper';
 import { fetchProductsRequest, updateProducts } from '../../redux/actions/ProductsActions';
+import './ProductSelector.css';
 
 export default class ProductSelector extends Component {
 
@@ -52,10 +53,14 @@ export default class ProductSelector extends Component {
 
   render() {
     return (
-      <div>
-        <FilterBar />
-        <Products />
-      </div>
+      <section className='produc-selector'>
+        <header className='filter-bar'>
+          <FilterBar />
+        </header>
+        <div className='products'>
+          <Products />
+        </div>        
+      </section>
     );
   }
 };

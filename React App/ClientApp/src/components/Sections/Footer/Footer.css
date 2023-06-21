@@ -1,30 +1,19 @@
 ﻿.footer {
-  background-color: #ecb00b;
+  background-color: #C4D7B2;
   padding: 0;
   margin: 0;
   width: 100%;
-  height: auto;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
 }
 
 .copyright-text {
-  padding: 0;
   padding: 15px 15px 15px 15px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-  
-.social-media-list {
-  padding: 0;
   margin: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.social-media-list li {
-  padding: 0;
-  padding: 15px 15px 15px 15px;
+  position: relative;
   display: block;
+  text-align: center;
+  font-size: 12px;
 }

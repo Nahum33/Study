@@ -32,17 +32,20 @@ export default class Header extends Component {
       <header className='header'>
         <nav className={isNavOpen ? 'header-nav responsive' : 'header-nav'}>
           <ul className='nav-list'>
-            <li className={activeLink === '/' ? 'active' : ''}>
+          <li className={activeLink === '/' ? 'active' : ''}>
               <Link onClick={this.handleLinkClick} to='/'>Inicio</Link>
             </li>
+            <li className={activeLink === '/contactos' ? 'active' : ''}>
+              <Link onClick={this.handleLinkClick} to='/contactos'>Contactos</Link>
+            </li>
             <li className={activeLink === '/about-us' ? 'active' : ''}>
-              <Link onClick={this.handleLinkClick} to='/about-us'>Contactos</Link>
+              <Link onClick={this.handleLinkClick} to='/about-us'>Acerca de nosotros</Link>
             </li>
           </ul>
-          <button className='nav-hamburger-button' onClick={this.toggleMenu}>
-            <i className='fa fa-bars'></i>
-          </button>
         </nav>
+        <button className='header-hamburger-button' onClick={this.toggleMenu}>
+          <i className='fa fa-bars'></i>
+        </button>
       </header>
     );
   }

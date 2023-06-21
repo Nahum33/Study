@@ -1,20 +1,18 @@
 import React, { Component } from 'react';
 import ProductSelector from '../../ProductSelector/ProductSelector';
 import SelectedProductToteBag from '../../SelectedProductToteBag/SelectedProductToteBag';
+import Banner from '../Banner/Banner';
+import './Home.css';
 
 export default class Home extends Component {
 
   render() {
     return (
-      <section>
-        <header>
-          <h1>Verdifrut</h1>
-          <p>Podés pedir los productos verdifrut que ves a continuación, lo más fresco de verduras y frutas hasta la puerta de tu casa.</p>
-        </header>
-        <hr />
+      <>
+        <Banner/>
         <ProductSelector/>
         <SelectedProductToteBag/>
-      </section>
+      </>
     );
   }
 }
