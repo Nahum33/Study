@@ -1,4 +1,4 @@
-.produc-selector {
+.product-selector-section {
   padding: 0;
   margin: 0;
   width: 100%;
@@ -7,7 +7,18 @@
   display: block
 }
 
-.produc-selector  .filter-bar {
+.product-selector-section .product-selector-header{
+  margin: 0;
+  width: 60%;
+  margin-left: 5%;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  color: #fff;
+  padding: 20px;
+}
+
+.product-selector-section .products {
   padding: 0;
   margin: 0;
   width: 90%;
@@ -17,12 +28,12 @@
   display: block;
 }
 
-.produc-selector  .products {
-    padding: 0;
+@media screen and (max-width: 600px) {
+  .product-selector-section .product-selector-header{
+    width: 100%;
     margin: 0;
-    width: 90%;
-    margin-left: 5%;
-    overflow: hidden;
-    position: relative;
-    display: block;
+    padding: 0;
+    height: auto;
+    display: flex;
   }
+}

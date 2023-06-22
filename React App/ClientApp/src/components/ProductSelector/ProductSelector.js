@@ -53,8 +53,8 @@ export default class ProductSelector extends Component {
 
   render() {
     return (
-      <section className='produc-selector'>
-        <header className='filter-bar'>
+      <section className='product-selector-section'>
+        <header className='product-selector-header'>
           <FilterBar />
         </header>
         <div className='products'>
