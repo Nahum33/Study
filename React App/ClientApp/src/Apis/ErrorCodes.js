@@ -1,5 +1,0 @@
-const ERROR_CODES = {
-    NOT_PRODUCTS_AVAILABLE: 'NO_PRODUCTS_RESPONSE'
-}
-
-export default ERROR_CODES;
