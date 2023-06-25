@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './FilterBar.css';
-import store from '../../redux/Store';
-import { onFilterBarChange } from '../../redux/actions/FilterBarActions';
+import store from '../../store/Store';
+import { onFilterBarChange } from '../../store/actions/FilterBarActions';
 import './FilterBar.css'
 
 export default class FilterBar extends Component {

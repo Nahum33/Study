@@ -1,6 +1,6 @@
 import React from 'react';
-import store from '../../redux/Store';
-import { addSelectedProduct } from '../../redux/actions/ProductsActions';
+import store from '../../store/Store';
+import { addSelectedProduct } from '../../store/actions/ProductsActions';
 
 class SelectedProduct extends React.Component {
   state = {

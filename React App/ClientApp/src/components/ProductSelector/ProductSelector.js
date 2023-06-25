@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import store from '../../redux/Store';
+import store from '../../store/Store';
 import Products from '../Products/Products';
 import FilterBar from '../FilterBar/FilterBar';
 import { getSortedObjectsListByPropertyAndSearchTerm } from '../../utils/ListSorterHelper';
 import { isEqualLists } from '../../utils/ListCompareHelper';
 import { getListWithUpdatedPropertyByIdList } from '../../utils/ListFilterHelper';
-import { fetchProductsRequest, updateProducts } from '../../redux/actions/ProductsActions';
+import { fetchProductsRequest, updateProducts } from '../../store/actions/ProductsActions';
 import './ProductSelector.css';
 
 export default class ProductSelector extends Component {
