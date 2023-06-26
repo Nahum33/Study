@@ -13,7 +13,7 @@ export function productsMiddleware(store) {
         const { dispatch } = store;
         if (action.type === 'FETCH_PRODUCTS_REQUEST') {
           try {
-            const products = await getProducts();
+            const products = await getProducts(action.payload);
             dispatch(fetchProductsSuccess(products));
           } catch (error) {
             const errorCode = ERROR_CODES[error.message];

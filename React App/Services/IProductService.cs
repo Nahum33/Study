@@ -11,6 +11,6 @@ namespace React_App.Services
         /// Method to get all products
         /// </summary>
         /// <returns>A list of products with the data requested</returns>
-        Task<IEnumerable<Product>?> GetAllProducts();
+        Task<IEnumerable<Product?>> GetAllProducts(string listName);
     }
 }

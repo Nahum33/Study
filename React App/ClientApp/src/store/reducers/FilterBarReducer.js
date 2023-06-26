@@ -1,12 +1,17 @@
 ﻿const initialState = {
-  searchTerm: ''
+  searchTerm: '',
+  category: ''
 };
 
 export default function filterBarReducer(state = initialState, action) {
   const actionHandlers = {
-    ON_FILTER_BAR_CHANGE: (state, action) => ({
+    ON_SEARCH_TERM_VALUE_CHANGE: (state, action) => ({
       ...state,
       searchTerm: action.payload
+    }),
+    ON_CATEGORY_VALUE_CHANGE: (state, action) => ({
+      ...state,
+      category: action.payload
     })
   };
 

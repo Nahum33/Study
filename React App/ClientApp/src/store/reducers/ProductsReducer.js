@@ -2,14 +2,16 @@
   products: [],
   selectedProducts: [],
   isFetchingResults: false,
-  errorCode: null
+  errorCode: null,
+  currentListName: ''
 };
 
 export default function productsReducer(state = initialState, action) {
   const actionHandlers = {
-    FETCH_PRODUCTS_REQUEST: (state) => ({
+    FETCH_PRODUCTS_REQUEST: (state, action) => ({
       ...state,
-      isFetchingResults: true
+      isFetchingResults: true,
+      currentListName: action.payload.listName
     }),
     FETCH_PRODUCTS_SUCCESS: (state, action) => ({
       ...state,

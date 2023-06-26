@@ -8,6 +8,7 @@
         public int Price { get; set; } = 0;
 
         public string Thumbnail { get; set; } = string.Empty;
+        public string Category { get; set; } = string.Empty;
 
         public bool isSelected { get; set; } = false;
     }

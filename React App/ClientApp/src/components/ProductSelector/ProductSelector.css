@@ -1,24 +1,6 @@
-.product-selector-section {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-  display: block
-}
 
-.product-selector-section .product-selector-header{
-  margin: 0;
-  width: 60%;
-  margin-left: 5%;
-  overflow: hidden;
-  position: relative;
-  display: block;
-  color: #fff;
-  padding: 20px;
-}
 
-.product-selector-section .products {
+.products {
   padding: 0;
   margin: 0;
   width: 90%;

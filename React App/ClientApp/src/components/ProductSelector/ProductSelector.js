@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import store from '../../store/Store';
 import Products from '../Products/Products';
-import FilterBar from '../FilterBar/FilterBar';
+
 import { getSortedObjectsListByPropertyAndSearchTerm } from '../../utils/ListSorterHelper';
 import { isEqualLists } from '../../utils/ListCompareHelper';
 import { getListWithUpdatedPropertyByIdList } from '../../utils/ListFilterHelper';
@@ -24,6 +24,19 @@ export default class ProductSelector extends Component {
     }
   }
 
+  handleCategoryChange(){
+    const categoryFromStore = store.getState().filterBarReducer.category;
+    const currentListNameFromStore = store.getState().productsReducer.currentListName;
+    if(!categoryFromStore || categoryFromStore === currentListNameFromStore){
+      return;
+    }
+
+    const filters = {
+      listName: categoryFromStore,
+    }
+    store.dispatch(fetchProductsRequest(filters));
+  }
+
   SelectedProductsChange(){
     const productsFromStore = store.getState().productsReducer.products;
     const selectedProductsFromStore = store.getState().productsReducer.selectedProducts;
@@ -43,24 +56,24 @@ export default class ProductSelector extends Component {
   componentDidMount() {
     this.unsubscribeSearchTerm = store.subscribe(this.handleSearchTermChange.bind(this));
     this.unsubscribeSelectedProducts = store.subscribe(this.SelectedProductsChange.bind(this));
-    store.dispatch(fetchProductsRequest());
+    this.unsubscribeHandleCategoryChange = store.subscribe(this.handleCategoryChange.bind(this));
+    const filters = {
+      listName: 'loMasVendido',
+    }
+    store.dispatch(fetchProductsRequest(filters));
   }
 
   componentWillUnmount() {
     this.unsubscribeSearchTerm();
     this.unsubscribeSelectedProducts();
+    this.unsubscribeHandleCategoryChange();
   }
 
   render() {
     return (
-      <section className='product-selector-section'>
-        <header className='product-selector-header'>
-          <FilterBar />
-        </header>
-        <div className='products'>
-          <Products />
-        </div>        
-      </section>
+      <>
+        <Products />
+      </>
     );
   }
 };

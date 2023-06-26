@@ -25,9 +25,9 @@ namespace React_App.Controllers
         /// <returns>response format API</returns>
         [HttpGet]
         [Route("GetProducts")]
-        public async Task<IResult?> GetProducts()
+        public async Task<IResult?> GetProducts([FromQuery] string listName)
         {
-            var products = await _productService.GetAllProducts();
+            var products = await _productService.GetAllProducts(listName);
 
             return products is not null
                 ? Results.Ok(new { products = products })

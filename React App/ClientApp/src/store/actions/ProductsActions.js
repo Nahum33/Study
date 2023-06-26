@@ -1,5 +1,5 @@
-﻿export const fetchProductsRequest = () => { 
-  return { type: 'FETCH_PRODUCTS_REQUEST' };
+﻿export const fetchProductsRequest = (filters) => { 
+  return { type: 'FETCH_PRODUCTS_REQUEST', payload: filters };
 };
   
 export const fetchProductsSuccess = (products)  => { 
