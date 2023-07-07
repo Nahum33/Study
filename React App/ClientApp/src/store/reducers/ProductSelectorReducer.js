@@ -1,17 +1,16 @@
 ﻿const initialState = {
   products: [],
   selectedProducts: [],
+  filters: {},
   isFetchingResults: false,
-  errorCode: null,
-  currentListName: ''
+  errorCode: null
 };
 
 export default function productsReducer(state = initialState, action) {
   const actionHandlers = {
-    FETCH_PRODUCTS_REQUEST: (state, action) => ({
+    FETCH_PRODUCTS_REQUEST: (state) => ({
       ...state,
       isFetchingResults: true,
-      currentListName: action.payload.listName
     }),
     FETCH_PRODUCTS_SUCCESS: (state, action) => ({
       ...state,
@@ -23,6 +22,24 @@ export default function productsReducer(state = initialState, action) {
       ...state,
       products: action.payload
     }),
+    UPDATE_PRODUCT_NAME_FILTER: (state, action) => {
+      const newState = {...state, filters: { ...state.filters, productName: action.payload }};
+    
+      if (!action.payload) {
+        delete newState.filters.productName;
+      }
+    
+      return newState;
+    },
+    UPDATE_CATEGORY_FILTER: (state, action) => {
+      const newState = {...state, filters: { ...state.filters, productCategory: action.payload }};
+    
+      if (!action.payload) {
+        delete newState.filters.productCategory;
+      }
+    
+      return newState;
+    },
     ADD_SELECTED_PRODUCT: (state, action) => ({
       ...state,
       selectedProducts: [...state.selectedProducts, action.payload],

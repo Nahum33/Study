@@ -1,6 +1,6 @@
-﻿using React_App.Services;
+﻿using React_App.AppCode.Services;
 
-namespace React_App.Extensions
+namespace React_App.AppCode.Extensions
 {
     /// <summary>
     /// Extension class to set inject new services to the collection services

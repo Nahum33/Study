@@ -21,11 +21,11 @@ export default class FilterBar extends Component {
       <form className='search-form'>
         <div className='select-wrapper'>
           <select name='category' className='search-select' onChange={this.handleSelectChange}>
-            <option className='select-option' value='loMasVendido' defaultValue>Lo más vendido</option>
-            <option className='select-option' value='Frutas'>Frutas</option>
-            <option className='select-option' value='Verduras'>Verduras</option>
-            <option className='select-option' value='Hortalizas'>Hortalizas</option>
-            <option className='select-option' value='Varios'>Varios</option>
+            <option className='select-option' value='' defaultValue>Todos los productos</option>
+            <option className='select-option' value='fruta'>Frutas</option>
+            <option className='select-option' value='verdura'>Verduras</option>
+            <option className='select-option' value='hortaliza'>Hortalizas</option>
+            <option className='select-option' value='otro'>Varios</option>
           </select>
           <span className='select-icon'>
             <i className='fa fa-chevron-down'></i>

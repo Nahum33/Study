@@ -1,4 +1,4 @@
-using React_App.Extensions;
+using React_App.AppCode.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 

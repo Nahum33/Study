@@ -1,6 +1,6 @@
 import { applyMiddleware } from 'redux';
-import { productsMiddleware } from './middlewares/productsMiddleware';
+import { productSelectorMiddleware } from './middlewares/productSelectorMiddleware';
 
-const composedMiddleware = applyMiddleware(productsMiddleware);
+const composedMiddleware = applyMiddleware(productSelectorMiddleware);
 
 export default composedMiddleware;

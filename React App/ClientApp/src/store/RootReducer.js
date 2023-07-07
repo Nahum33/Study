@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
-import productsReducer from './reducers/ProductsReducer';
+import productSelectorReducer from './reducers/ProductSelectorReducer';
 import filterBarReducer from './reducers/FilterBarReducer';
 
 const rootReducer = combineReducers({
-  productsReducer: productsReducer,
+  productSelectorReducer: productSelectorReducer,
   filterBarReducer: filterBarReducer
 });
 

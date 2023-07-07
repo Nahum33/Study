@@ -1,6 +1,6 @@
 import React from 'react';
 import store from '../../store/Store';
-import { addSelectedProduct } from '../../store/actions/ProductsActions';
+import { addSelectedProduct } from '../../store/actions/ProductSelectorActions';
 
 const Product = ({ product }) => {
   const handleProductSelect = (product) => {

@@ -1,7 +1,7 @@
-﻿using React_App.Models;
-using System.Text.Json;
+﻿using React_App.AppCode.Models;
+using React_App.AppCode.ProductFilters;
 
-namespace React_App.Services
+namespace React_App.AppCode.Services
 {
     /// <summary>
     /// Service in change to handle de request to get the product data
@@ -16,23 +16,45 @@ namespace React_App.Services
         }
 
         /// <summary>
-        /// Method to get all products
+        /// Retrieves a list of products based on the specified product filters.
         /// </summary>
-        /// <returns>A list of products with the data requested</returns>
-        public async Task<IEnumerable<Product?>> GetAllProducts(string listName)
+        /// <param name="filters">The filters of the product to search for. Leave all properties empty to retrieve top 10 products.</param>
+        /// <returns>A list of products that match the specified criteria.</returns>
+        public async Task<IEnumerable<Product>?> GetProductsByCategoryAndNameAsync(ProductFiltersModel filters)
         {
+            // This lines is to add later DDD design pattern
             var uri = $"{_httpClient.BaseAddress}products/all";
             var response = await _httpClient.GetAsync(uri, HttpCompletionOption.ResponseHeadersRead);
-
-            IEnumerable<Product?> verduras = new List<Product?>()
+            if (response.IsSuccessStatusCode)
             {
+                var contentStream = await response.Content.ReadAsStreamAsync();
+                return null;
+            }
+
+            // Command and composite pattern here
+            var products = GetProducts();
+            var filterCommand = new FilterCommand();
+            var filteredProducts = filterCommand.Apply(products, filters);
+
+            return filteredProducts;
+        }
+
+        /// <summary>
+        /// Temporal method to get the product list
+        /// </summary>
+        /// <returns>Product list</returns>
+        private IEnumerable<Product> GetProducts()
+        {
+            IEnumerable<Product> productos = new List<Product>()
+            {
+                // Verduras
                 new Product()
                 {
                     Id = "V001",
                     Name = "PAPA",
                     Price = 2000,
                     Thumbnail = "test",
-                    Category="VERDURA"
+                    Category = "VERDURA"
                 },
                 new Product()
                 {
@@ -40,7 +62,7 @@ namespace React_App.Services
                     Name = "REPOLLO",
                     Price = 2000,
                     Thumbnail = "test",
-                    Category="VERDURA"
+                    Category = "VERDURA"
                 },
                 new Product()
                 {
@@ -48,7 +70,7 @@ namespace React_App.Services
                     Name = "TOMATE",
                     Price = 2000,
                     Thumbnail = "test",
-                    Category="VERDURA"
+                    Category = "VERDURA"
                 },
                 new Product()
                 {
@@ -56,7 +78,7 @@ namespace React_App.Services
                     Name = "ZANAHORIA",
                     Price = 2000,
                     Thumbnail = "test",
-                    Category="VERDURA"
+                    Category = "VERDURA"
                 },
                 new Product()
                 {
@@ -64,7 +86,7 @@ namespace React_App.Services
                     Name = "YUCA",
                     Price = 2000,
                     Thumbnail = "test",
-                    Category="VERDURA"
+                    Category = "VERDURA"
                 },
                 new Product()
                 {
@@ -72,7 +94,7 @@ namespace React_App.Services
                     Name = "CHILE DULCE",
                     Price = 2000,
                     Thumbnail = "test",
-                    Category="VERDURA"
+                    Category = "VERDURA"
                 },
                 new Product()
                 {
@@ -80,7 +102,7 @@ namespace React_App.Services
                     Name = "CAMOTE",
                     Price = 2000,
                     Thumbnail = "test",
-                    Category="VERDURA"
+                    Category = "VERDURA"
                 },
                 new Product()
                 {
@@ -88,7 +110,7 @@ namespace React_App.Services
                     Name = "CEBOLLA",
                     Price = 2000,
                     Thumbnail = "test",
-                    Category="VERDURA"
+                    Category = "VERDURA"
                 },
                 new Product()
                 {
@@ -96,7 +118,7 @@ namespace React_App.Services
                     Name = "CEBOLLA MORADA",
                     Price = 2000,
                     Thumbnail = "test",
-                    Category="VERDURA"
+                    Category = "VERDURA"
                 },
                 new Product()
                 {
@@ -104,19 +126,42 @@ namespace React_App.Services
                     Name = "REPOLLO MORADO",
                     Price = 2000,
                     Thumbnail = "test",
-                    Category="VERDURA"
-                }
-            };
+                    Category = "VERDURA"
+                },
+                new Product()
+                {
+                    Id = "V011",
+                    Name = "LECHUGA",
+                    Price = 1500,
+                    Thumbnail = "test",
+                    Category = "VERDURA"
+                },
+                new Product()
+                {
+                    Id = "V012",
+                    Name = "AJÍ",
+                    Price = 1000,
+                    Thumbnail = "test",
+                    Category = "VERDURA"
+                },
+                new Product()
+                {
+                    Id = "V013",
+                    Name = "ESPÁRRAGOS",
+                    Price = 3000,
+                    Thumbnail = "test",
+                    Category = "VERDURA"
+                },
+                // ... Añade más verduras aquí
 
-            IEnumerable<Product?> frutas = new List<Product?>()
-            {
+                // Frutas
                 new Product()
                 {
                     Id = "F001",
                     Name = "MANZANA",
                     Price = 250,
                     Thumbnail = "test",
-                    Category="FRUTA"
+                    Category = "FRUTA"
                 },
                 new Product()
                 {
@@ -124,7 +169,7 @@ namespace React_App.Services
                     Name = "NARANJA",
                     Price = 2000,
                     Thumbnail = "test",
-                    Category="FRUTA"
+                    Category = "FRUTA"
                 },
                 new Product()
                 {
@@ -132,7 +177,7 @@ namespace React_App.Services
                     Name = "UVA",
                     Price = 2000,
                     Thumbnail = "test",
-                    Category="FRUTA"
+                    Category = "FRUTA"
                 },
                 new Product()
                 {
@@ -140,7 +185,7 @@ namespace React_App.Services
                     Name = "UVA VERDE",
                     Price = 2000,
                     Thumbnail = "test",
-                    Category="FRUTA"
+                    Category = "FRUTA"
                 },
                 new Product()
                 {
@@ -148,7 +193,7 @@ namespace React_App.Services
                     Name = "PERA",
                     Price = 2000,
                     Thumbnail = "test",
-                    Category="FRUTA"
+                    Category = "FRUTA"
                 },
                 new Product()
                 {
@@ -156,7 +201,7 @@ namespace React_App.Services
                     Name = "GUAYABA",
                     Price = 2000,
                     Thumbnail = "test",
-                    Category="FRUTA"
+                    Category = "FRUTA"
                 },
                 new Product()
                 {
@@ -164,7 +209,7 @@ namespace React_App.Services
                     Name = "MANDARINA",
                     Price = 3000,
                     Thumbnail = "test",
-                    Category="FRUTA"
+                    Category = "FRUTA"
                 },
                 new Product()
                 {
@@ -172,7 +217,7 @@ namespace React_App.Services
                     Name = "FRESAS",
                     Price = 2000,
                     Thumbnail = "test",
-                    Category="FRUTA"
+                    Category = "FRUTA"
                 },
                 new Product()
                 {
@@ -180,7 +225,7 @@ namespace React_App.Services
                     Name = "MANGO",
                     Price = 2000,
                     Thumbnail = "test",
-                    Category="FRUTA"
+                    Category = "FRUTA"
                 },
                 new Product()
                 {
@@ -188,19 +233,42 @@ namespace React_App.Services
                     Name = "SANDIA",
                     Price = 2000,
                     Thumbnail = "test",
-                    Category="FRUTA"
-                }
-            };
+                    Category = "FRUTA"
+                },
+                new Product()
+                {
+                    Id = "F011",
+                    Name = "PLÁTANO",
+                    Price = 1500,
+                    Thumbnail = "test",
+                    Category = "FRUTA"
+                },
+                new Product()
+                {
+                    Id = "F012",
+                    Name = "KIWI",
+                    Price = 2000,
+                    Thumbnail = "test",
+                    Category = "FRUTA"
+                },
+                new Product()
+                {
+                    Id = "F013",
+                    Name = "MELÓN",
+                    Price = 2500,
+                    Thumbnail = "test",
+                    Category = "FRUTA"
+                },
+                // ... Añade más frutas aquí
 
-            IEnumerable<Product?> hortalizas = new List<Product?>()
-            {
+                // Hortalizas
                 new Product()
                 {
                     Id = "H001",
                     Name = "CEBOLLINO",
                     Price = 2000,
                     Thumbnail = "test",
-                    Category="HORTALIZA"
+                    Category = "HORTALIZA"
                 },
                 new Product()
                 {
@@ -208,7 +276,7 @@ namespace React_App.Services
                     Name = "CULANTRO CASTILLA",
                     Price = 2000,
                     Thumbnail = "test",
-                    Category="HORTALIZA"
+                    Category = "HORTALIZA"
                 },
                 new Product()
                 {
@@ -216,19 +284,34 @@ namespace React_App.Services
                     Name = "TOMILLO",
                     Price = 2000,
                     Thumbnail = "test",
-                    Category="HORTALIZA"
-                }
-            };
+                    Category = "HORTALIZA"
+                },
+                new Product()
+                {
+                    Id = "H004",
+                    Name = "PIMIENTO",
+                    Price = 1500,
+                    Thumbnail = "test",
+                    Category = "HORTALIZA"
+                },
+                new Product()
+                {
+                    Id = "H005",
+                    Name = "BERENJENA",
+                    Price = 2000,
+                    Thumbnail = "test",
+                    Category = "HORTALIZA"
+                },
+                // ... Añade más hortalizas aquí
 
-            IEnumerable<Product?> varios = new List<Product?>()
-            {
+                // Varios
                 new Product()
                 {
                     Id = "B001",
                     Name = "QUESO",
                     Price = 2000,
                     Thumbnail = "test",
-                    Category="VARIOS"
+                    Category = "OTRO"
                 },
                 new Product()
                 {
@@ -236,7 +319,7 @@ namespace React_App.Services
                     Name = "HUEVOS",
                     Price = 2000,
                     Thumbnail = "test",
-                    Category="VARIOS"
+                    Category = "OTRO"
                 },
                 new Product()
                 {
@@ -244,30 +327,27 @@ namespace React_App.Services
                     Name = "COCO",
                     Price = 2000,
                     Thumbnail = "test",
-                    Category="VARIOS"
-                }
+                    Category = "OTRO"
+                },
+                new Product()
+                {
+                    Id = "B004",
+                    Name = "MIEL",
+                    Price = 3000,
+                    Thumbnail = "test",
+                    Category = "OTRO"
+                },
+                new Product()
+                {
+                    Id = "B005",
+                    Name = "ACEITE DE OLIVA",
+                    Price = 5000,
+                    Thumbnail = "test",
+                    Category = "OTRO"
+                },
             };
 
-            Dictionary<string, IEnumerable<Product?>> productListDictionary = new Dictionary<string, IEnumerable<Product?>>()
-            {
-                { "Verduras", verduras },
-                { "Frutas", frutas },
-                { "Hortalizas", hortalizas },
-                { "Varios", varios }
-            };
-
-            IEnumerable<Product?> combinedList = productListDictionary.Values.SelectMany(list => list.Take(2)).ToList<Product?>();
-            productListDictionary.Add("loMasVendido", combinedList);
-
-            IEnumerable<Product?> products = productListDictionary[listName] ?? Enumerable.Empty<Product?>();
-
-            if (response.IsSuccessStatusCode)
-            {
-                var contentStream = await response.Content.ReadAsStreamAsync();
-                return products;
-            }
-
-            return products;
+            return productos;
         }
     }
 }

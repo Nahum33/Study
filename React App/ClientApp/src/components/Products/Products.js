@@ -4,11 +4,11 @@ import store from '../../store/Store';
 
 export default class Products extends Component {
   state = {
-    products: store.getState().productsReducer.products
+    products: store.getState().productSelectorReducer.products
   };
 
   handleStoreChange = () => {
-    const productsFromStore = store.getState().productsReducer.products;
+    const productsFromStore = store.getState().productSelectorReducer.products;
     this.setState({ products: productsFromStore });
   }
   

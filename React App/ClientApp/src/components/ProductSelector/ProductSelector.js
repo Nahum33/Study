@@ -1,66 +1,39 @@
 import React, { Component } from 'react';
 import store from '../../store/Store';
 import Products from '../Products/Products';
-
-import { getSortedObjectsListByPropertyAndSearchTerm } from '../../utils/ListSorterHelper';
-import { isEqualLists } from '../../utils/ListCompareHelper';
-import { getListWithUpdatedPropertyByIdList } from '../../utils/ListFilterHelper';
-import { fetchProductsRequest, updateProducts } from '../../store/actions/ProductsActions';
+import { updateProductNameFilter, updateProductCategoryFilter, fetchProductsRequest } from '../../store/actions/ProductSelectorActions';
 import './ProductSelector.css';
 
 export default class ProductSelector extends Component {
 
   handleSearchTermChange(){
-    const searchTermFromStore = store.getState().filterBarReducer.searchTerm;
-    const productsFromStore = store.getState().productsReducer.products;
-    const sortedProductsList = getSortedObjectsListByPropertyAndSearchTerm({
-      searchTerm: searchTermFromStore,
-      objectList: productsFromStore,
-      propertyName: 'name'
-    });
-
-    if(!isEqualLists({ listA: sortedProductsList, listB: productsFromStore})){
-      store.dispatch(updateProducts(sortedProductsList));
+    const searchTerm = store.getState().filterBarReducer.searchTerm;
+    const productNameFilter = store.getState().productSelectorReducer.filters.productName;
+    if(searchTerm === productNameFilter){
+      return;
     }
+    store.dispatch(updateProductNameFilter(searchTerm));
+    store.dispatch(fetchProductsRequest());
   }
 
   handleCategoryChange(){
-    const categoryFromStore = store.getState().filterBarReducer.category;
-    const currentListNameFromStore = store.getState().productsReducer.currentListName;
-    if(!categoryFromStore || categoryFromStore === currentListNameFromStore){
+    const category = store.getState().filterBarReducer.category;
+    const productCategoryFilter = store.getState().productSelectorReducer.filters.productCategory;
+    if(category === productCategoryFilter){
       return;
     }
-
-    const filters = {
-      listName: categoryFromStore,
-    }
-    store.dispatch(fetchProductsRequest(filters));
+    store.dispatch(updateProductCategoryFilter(category));
+    store.dispatch(fetchProductsRequest());
   }
 
-  SelectedProductsChange(){
-    const productsFromStore = store.getState().productsReducer.products;
-    const selectedProductsFromStore = store.getState().productsReducer.selectedProducts;
-    const productsIdListToUpdate = selectedProductsFromStore.map(obj => obj.id);
-    const updatedProductsList = getListWithUpdatedPropertyByIdList({
-      objectList: productsFromStore,
-      propertyName: 'isSelected',
-      value: true,
-      filterIdList: productsIdListToUpdate
-    });
-
-    if(!isEqualLists({ listA: updatedProductsList, listB: productsFromStore})){
-      store.dispatch(updateProducts(updatedProductsList));
-    }
+  handleSelectedProductsChange(){
   }
 
   componentDidMount() {
     this.unsubscribeSearchTerm = store.subscribe(this.handleSearchTermChange.bind(this));
-    this.unsubscribeSelectedProducts = store.subscribe(this.SelectedProductsChange.bind(this));
+    this.unsubscribeSelectedProducts = store.subscribe(this.handleSelectedProductsChange.bind(this));
     this.unsubscribeHandleCategoryChange = store.subscribe(this.handleCategoryChange.bind(this));
-    const filters = {
-      listName: 'loMasVendido',
-    }
-    store.dispatch(fetchProductsRequest(filters));
+    store.dispatch(fetchProductsRequest());
   }
 
   componentWillUnmount() {

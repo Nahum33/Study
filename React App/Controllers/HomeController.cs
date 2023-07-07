@@ -1,6 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using React_App.Services;
+﻿using Microsoft.AspNetCore.Mvc;
+using React_App.AppCode.ProductFilters;
+using React_App.AppCode.Services;
 
 namespace React_App.Controllers
 {
@@ -20,14 +20,15 @@ namespace React_App.Controllers
         }
 
         /// <summary>
-        /// GET Method to get the initial values for the home component
+        /// GET Method to retrieve the products filtered.
         /// </summary>
-        /// <returns>response format API</returns>
+        /// <param name="filters">The filters of the product to search for. Leave all properties empty to retrieve top 10 products.</param>
+        /// <returns>A response in API format.</returns>
         [HttpGet]
         [Route("GetProducts")]
-        public async Task<IResult?> GetProducts([FromQuery] string listName)
+        public async Task<IResult?> GetProductsByCategoryAndNameAsync([FromQuery] ProductFiltersModel filters)
         {
-            var products = await _productService.GetAllProducts(listName);
+            var products = await _productService.GetProductsByCategoryAndNameAsync(filters);
 
             return products is not null
                 ? Results.Ok(new { products = products })
