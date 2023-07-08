@@ -6,7 +6,7 @@ namespace React_App.AppCode.ProductFilters
     /// <summary>
     /// Default filter for products.
     /// </summary>
-    public class DefaultFilter : IComposite
+    public class DefaultFilter : IFilter
     {
         public DefaultFilter() { }
 

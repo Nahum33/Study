@@ -6,20 +6,20 @@ namespace React_App.AppCode.ProductFilters
     /// <summary>
     /// Composite filter that combines multiple filters.
     /// </summary>
-    public class CompositeFilter : IComposite
+    public class CompositeFilter : IFilter
     {
-        private readonly List<IComposite> _filters;
+        private readonly List<IFilter> _filters;
 
         public CompositeFilter()
         {
-            _filters = new List<IComposite>();
+            _filters = new List<IFilter>();
         }
 
         /// <summary>
         /// Adds a filter to the composite filter.
         /// </summary>
         /// <param name="filter">The filter to add.</param>
-        public void AddFilter(IComposite filter)
+        public void AddFilter(IFilter filter)
         {
             _filters.Add(filter);
         }

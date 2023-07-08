@@ -14,10 +14,5 @@ namespace React_App.AppCode.ProductFilters
         /// Gets or sets the category of the product.
         /// </summary>
         public string ProductCategory { get; set; } = string.Empty;
-
-        /// <summary>
-        /// Gets or sets the category of the product.
-        /// </summary>
-        public bool HasFilters => !string.IsNullOrEmpty(ProductCategory) || !string.IsNullOrEmpty(ProductName);
     }
 }

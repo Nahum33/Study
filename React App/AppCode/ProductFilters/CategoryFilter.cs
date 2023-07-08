@@ -6,11 +6,11 @@ namespace React_App.AppCode.ProductFilters
     /// <summary>
     /// Category filter for products.
     /// </summary>
-    public class CategoryFilter : IComposite
+    public class CategoryFilter : IFilter
     {
-        private readonly string _category;
+        private readonly string? _category;
 
-        public CategoryFilter(string category)
+        public CategoryFilter(string? category = null)
         {
             _category = category;
         }
@@ -22,7 +22,7 @@ namespace React_App.AppCode.ProductFilters
         /// <returns>The filtered list of products.</returns>
         public IEnumerable<Product> Apply(IEnumerable<Product> products)
         {
-            return products.Where(p => p.Category.ToLower() == _category.ToLower());
+            return _category is null ? products : products.Where(p => p.Category.ToLower().Equals(_category.ToLower()));
         }
     }
 }

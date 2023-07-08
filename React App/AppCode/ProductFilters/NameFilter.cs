@@ -6,11 +6,11 @@ namespace React_App.AppCode.ProductFilters
     /// <summary>
     /// Name filter for products.
     /// </summary>
-    public class NameFilter : IComposite
+    public class NameFilter : IFilter
     {
-        private readonly string _name;
+        private readonly string? _name;
 
-        public NameFilter(string name)
+        public NameFilter(string? name = null)
         {
             _name = name;
         }
@@ -22,7 +22,7 @@ namespace React_App.AppCode.ProductFilters
         /// <returns>The filtered list of products.</returns>
         public IEnumerable<Product> Apply(IEnumerable<Product> products)
         {
-            return products.Where(p => p.Name.ToLower().Contains(_name.ToLower()));
+            return _name is null ? products : products.Where(p => p.Name.ToLower().Contains(_name.ToLower()));
         }
     }
 }

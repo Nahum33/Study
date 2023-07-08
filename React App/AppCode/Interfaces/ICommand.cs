@@ -12,8 +12,7 @@ namespace React_App.AppCode.Interfaces
         /// Executes the command.
         /// </summary>
         /// <param name="products"> Products List to filtered</param>
-        /// <param name="filters"> Filters model to apply</param>
         /// <returns>The filtered list of products.</returns>
-        IEnumerable<Product> Apply(IEnumerable<Product> products, ProductFiltersModel filters);
+        IEnumerable<Product> Execute(IEnumerable<Product> products);
     }
 }

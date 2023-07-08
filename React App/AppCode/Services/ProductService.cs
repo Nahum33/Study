@@ -1,4 +1,5 @@
-﻿using React_App.AppCode.Models;
+﻿using React_App.AppCode.Interfaces;
+using React_App.AppCode.Models;
 using React_App.AppCode.ProductFilters;
 
 namespace React_App.AppCode.Services
@@ -31,10 +32,11 @@ namespace React_App.AppCode.Services
                 return null;
             }
 
-            // Command and composite pattern here
             var products = GetProducts();
-            var filterCommand = new FilterCommand();
-            var filteredProducts = filterCommand.Apply(products, filters);
+            var compositeFilterCreator = new CompositeFilterCreator(filters);
+            var filter = compositeFilterCreator.Create();
+            var applyFilterCommand = new ApplyFilterCommand(filter);
+            var filteredProducts = applyFilterCommand.Execute(products);
 
             return filteredProducts;
         }

@@ -5,7 +5,7 @@ namespace React_App.AppCode.Interfaces
     /// <summary>
     /// Interface for product filters
     /// </summary>
-    public interface IComposite
+    public interface IFilter
     {
         /// <summary>
         /// Applies the logic filter to the list of products.
