@@ -1,6 +1,7 @@
-﻿using React_App.AppCode.Interfaces;
-using React_App.AppCode.Models;
-using React_App.AppCode.ProductFilters;
+﻿using React_App.AppCode.Components.Product.Commands;
+using React_App.AppCode.Components.Product.Factories;
+using React_App.AppCode.Components.Product.Models;
+using React_App.AppCode.Interfaces;
 
 namespace React_App.AppCode.Services
 {
@@ -32,11 +33,20 @@ namespace React_App.AppCode.Services
                 return null;
             }
 
+            // Get Products from the source
             var products = GetProducts();
-            var compositeFilterCreator = new CompositeFilterCreator(filters);
-            var filter = compositeFilterCreator.Create();
-            var applyFilterCommand = new ApplyFilterCommand(filter);
-            var filteredProducts = applyFilterCommand.Execute(products);
+
+            // Filter Order Rules
+            var filter = new ProductFilterFactory(filters).Create();
+
+            // Filters and Source config to the command
+            var applyFilterCommand = new ApplyProductFilterCommand(filter, products);
+
+            // Execute the filter command in the source
+            applyFilterCommand.Execute();
+
+            // Get Filtered Product after execute the command
+            var filteredProducts = applyFilterCommand.GetExecutionResult();
 
             return filteredProducts;
         }
@@ -45,9 +55,9 @@ namespace React_App.AppCode.Services
         /// Temporal method to get the product list
         /// </summary>
         /// <returns>Product list</returns>
-        private IEnumerable<Product> GetProducts()
+        private IEnumerable<Product>? GetProducts()
         {
-            IEnumerable<Product> productos = new List<Product>()
+            IEnumerable<Product>? products = new List<Product>()
             {
                 // Verduras
                 new Product()
@@ -349,7 +359,7 @@ namespace React_App.AppCode.Services
                 },
             };
 
-            return productos;
+            return products;
         }
     }
 }

@@ -1,4 +1,4 @@
-namespace React_App.AppCode.ProductFilters
+namespace React_App.AppCode.Components.Product.Models
 {
     /// <summary>
     /// Model for filtering products.

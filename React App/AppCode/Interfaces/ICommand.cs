@@ -1,18 +1,13 @@
-using React_App.AppCode.Models;
-using React_App.AppCode.ProductFilters;
-
 namespace React_App.AppCode.Interfaces
 {
     /// <summary>
-    /// The Command interface declares a method for executing a command.
+    /// The Command interface declares a method to execute a Command.
     /// </summary>
     public interface ICommand
     {
         /// <summary>
-        /// Executes the command.
+        /// Perform the command.
         /// </summary>
-        /// <param name="products"> Products List to filtered</param>
-        /// <returns>The filtered list of products.</returns>
-        IEnumerable<Product> Execute(IEnumerable<Product> products);
+        void Execute();
     }
 }

@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using React_App.AppCode.ProductFilters;
+using React_App.AppCode.Components.Product.Models;
 using React_App.AppCode.Services;
 
 namespace React_App.Controllers

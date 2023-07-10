@@ -1,4 +1,4 @@
-﻿namespace React_App.AppCode.Models
+﻿namespace React_App.AppCode.Components.Product.Models
 {
     /// <summary>
     /// Model to map the properties for the product concept
