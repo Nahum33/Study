@@ -8,7 +8,7 @@
         /// <summary>
         /// Gets or Sets the identifier of the product
         /// </summary>
-        public string Id { get; set; } = string.Empty;
+        public string ProductId { get; set; } = string.Empty;
 
         /// <summary>
         /// Gets or Sets the name of the product
@@ -18,7 +18,7 @@
         /// <summary>
         /// Gets or Sets the price of the product
         /// </summary>
-        public int Price { get; set; } = 0;
+        public decimal Price { get; set; } = 0;
 
         /// <summary>
         /// Gets or Sets the thumbnail image of the product
@@ -29,6 +29,11 @@
         /// Gets or Sets the category of the product
         /// </summary>
         public string Category { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Gets or Sets the category of the product
+        /// </summary>
+        public string Description { get; set; } = string.Empty;
 
         /// <summary>
         /// Gets or Sets the isSelected flag in the UI

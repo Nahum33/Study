@@ -16,8 +16,8 @@ namespace React_App.AppCode.Extensions
         {
             services.AddHttpClient<IProductService, ProductService>(config =>
             {
-                // Injection of new HttpClient Instance with a new base url for the UserService
-                config.BaseAddress = new Uri("https://api.github.com");
+                // Injection of new HttpClient Instance with a new base url for the mongodb atlas
+                config.BaseAddress = new Uri("https://us-east-1.aws.data.mongodb-api.com/app/data-shujj/");
             });
 
             return services;

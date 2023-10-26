@@ -26,7 +26,7 @@ export default class Products extends Component {
     return (
       <ul>
         {products.map(product => (
-          <Product key={product.id} product={product} />
+          <Product key={product.productId} product={product} />
         ))}
       </ul>
     );
