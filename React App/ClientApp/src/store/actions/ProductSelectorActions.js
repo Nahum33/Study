@@ -22,6 +22,6 @@ export const fetchProductsFailure = (errorCode) => {
   return { type: 'FETCH_PRODUCTS_FAILURE', payload: errorCode };
 };
 
-export const addSelectedProduct = (product) => {
-  return { type: 'ADD_SELECTED_PRODUCT', payload: product };
+export const addProductToOrder = (product) => {
+  return { type: 'ADD_PRODUCT_TO_ORDER', payload: product };
 };

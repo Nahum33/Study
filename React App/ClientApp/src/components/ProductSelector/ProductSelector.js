@@ -26,27 +26,20 @@ export default class ProductSelector extends Component {
     store.dispatch(fetchProductsRequest());
   }
 
-  handleSelectedProductsChange(){
-  }
-
   componentDidMount() {
     this.unsubscribeSearchTerm = store.subscribe(this.handleSearchTermChange.bind(this));
-    this.unsubscribeSelectedProducts = store.subscribe(this.handleSelectedProductsChange.bind(this));
     this.unsubscribeHandleCategoryChange = store.subscribe(this.handleCategoryChange.bind(this));
     store.dispatch(fetchProductsRequest());
   }
 
   componentWillUnmount() {
     this.unsubscribeSearchTerm();
-    this.unsubscribeSelectedProducts();
     this.unsubscribeHandleCategoryChange();
   }
 
   render() {
     return (
-      <>
-        <Products />
-      </>
+      <Products />
     );
   }
 };

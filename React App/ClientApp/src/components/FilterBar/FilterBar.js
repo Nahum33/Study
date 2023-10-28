@@ -21,18 +21,19 @@ export default class FilterBar extends Component {
       <form className='search-form'>
         <div className='select-wrapper'>
           <select name='category' className='search-select' onChange={this.handleSelectChange}>
-            <option className='select-option' value='' defaultValue>Todos los productos</option>
-            <option className='select-option' value='fruta'>Frutas</option>
-            <option className='select-option' value='verdura'>Verduras</option>
-            <option className='select-option' value='hortaliza'>Hortalizas</option>
-            <option className='select-option' value='otro'>Varios</option>
+            <option className='select-option' value='' defaultValue>Categorias</option>
+            <option className='select-option' value='fruta'>Hamburguesas</option>
+            <option className='select-option' value='verdura'>Sandwichs</option>
+            <option className='select-option' value='hortaliza'>Con Papas</option>
+            <option className='select-option' value='otro'>Pollos</option>
+            <option className='select-option' value='otro'>Refrescos</option>
           </select>
           <span className='select-icon'>
             <i className='fa fa-chevron-down'></i>
           </span>
         </div>
         <div className='search-wrapper'>
-          <input type='text' name='search' className='search-input' placeholder='Buscar frutas, verduras y otros productos' onChange={this.handleInputChange}/>
+          <input type='text' name='search' className='search-input' placeholder='Nombre del combo' onChange={this.handleInputChange}/>
           <button type='button' className='search-button'>
             <i className='fa fa-search search-button-icon'></i>Buscar
           </button>

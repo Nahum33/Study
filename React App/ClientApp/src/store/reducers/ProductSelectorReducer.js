@@ -1,6 +1,6 @@
 ﻿const initialState = {
   products: [],
-  selectedProducts: [],
+  order: [],
   filters: {},
   isFetchingResults: false,
   errorCode: null
@@ -40,9 +40,9 @@ export default function productsReducer(state = initialState, action) {
     
       return newState;
     },
-    ADD_SELECTED_PRODUCT: (state, action) => ({
+    ADD_PRODUCT_TO_ORDER: (state, action) => ({
       ...state,
-      selectedProducts: [...state.selectedProducts, action.payload],
+      order: [...state.order, action.payload],
     }),
     FETCH_PRODUCTS_FAILURE: (state, action) => ({
       ...state,

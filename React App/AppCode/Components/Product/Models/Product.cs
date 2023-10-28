@@ -34,10 +34,5 @@
         /// Gets or Sets the category of the product
         /// </summary>
         public string Description { get; set; } = string.Empty;
-
-        /// <summary>
-        /// Gets or Sets the isSelected flag in the UI
-        /// </summary>
-        public bool isSelected { get; set; } = false;
     }
 }

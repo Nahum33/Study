@@ -7,9 +7,9 @@ export default class Banner extends Component {
     return (
       <div className='banner'>
         <div className='bane-info'>
-          <h1>Verdifrut</h1>
-          <p>Podés pedir los productos verdifrut que ves a continuación, lo más fresco de verduras y frutas y otros productos hasta la puerta de tu casa.</p>
-          <p>Ordená tu pedido, nosotros te lo llevamos gratis por una copra mínima de 5 mil colones</p>
+          <h1>The Food Truck Zuñiga</h1>
+          <p>Ahora en puerto viejo con nuestros productos, la mejor comida rápida de Talamanca</p>
+          <p>Podés ordernar aquí con solo hacer click</p>
         </div>
       </div>
     );

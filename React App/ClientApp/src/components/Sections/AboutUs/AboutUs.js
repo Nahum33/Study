@@ -7,9 +7,9 @@ export default class Home extends Component {
     return (
       <section>
         <header>
-          <h1>Verdifrut</h1>
-          <p>Verdifrut es una empresa familiar de la zona de siquirres</p>
-          <p>Principalmente destacada por tener a una integrante, la hija mayor muy hermosa, guapa, talentosa, la ingeniera más hermosa de este mundo</p>
+          <h1>The Food Truck Zuñiga</h1>
+          <p>Información acerca de su negocio</p>
+          <p>¿Quienes somos?</p>
         </header>
       </section>
     );

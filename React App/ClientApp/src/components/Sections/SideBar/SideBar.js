@@ -15,22 +15,22 @@ export default class SideBar extends Component {
         <ul>
           <li>
             <div>
-              DATO 1
+              Aqui ponemos ofertas o información de otro local
             </div>
           </li>
           <li>
             <div>
-              DATO 2
+            Aqui ponemos ofertas o información de otro local
             </div>
           </li>
           <li>
             <div>
-              DATO 3
+            Aqui ponemos ofertas o información de otro local
             </div>
           </li>
           <li>
             <div>
-              DATO 4
+            Aqui ponemos ofertas o información de otro local
             </div>
           </li>
         </ul>

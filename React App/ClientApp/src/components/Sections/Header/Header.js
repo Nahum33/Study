@@ -32,8 +32,8 @@ export default class Header extends Component {
       <header className='header'>
         <nav className={isNavOpen ? 'header-nav responsive' : 'header-nav'}>
           <ul className='nav-list'>
-          <li className={activeLink === '/' ? 'active' : ''}>
-              <Link onClick={this.handleLinkClick} to='/'>Inicio</Link>
+            <li className={activeLink === '/' ? 'active' : ''}>
+              <Link onClick={this.handleLinkClick} to='/'>LOGO</Link>
             </li>
             <li className={activeLink === '/contactos' ? 'active' : ''}>
               <Link onClick={this.handleLinkClick} to='/contactos'>Contactos</Link>
