@@ -1,11 +1,15 @@
-using React_App.AppCode.Extensions;
+using React_App.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Log Configuration
+builder.Logging.ClearProviders();
+builder.Logging.AddConsole();
+builder.Logging.AddDebug();
 
+// Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddHttpClientServices();
+builder.Services.AddHttpClientServices(builder.Configuration);
 
 
 var app = builder.Build();

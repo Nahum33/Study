@@ -1,0 +1,364 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\nblanco\\Desktop\\Study\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{27FEBE5D-E1FB-47C7-883F-59D29A74BCBA}|React App\\React App.csproj|c:\\users\\nblanco\\desktop\\study\\react app\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{27FEBE5D-E1FB-47C7-883F-59D29A74BCBA}|React App\\React App.csproj|solutionrelative:react app\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27FEBE5D-E1FB-47C7-883F-59D29A74BCBA}|React App\\React App.csproj|c:\\users\\nblanco\\desktop\\study\\react app\\services\\serviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27FEBE5D-E1FB-47C7-883F-59D29A74BCBA}|React App\\React App.csproj|solutionrelative:react app\\services\\serviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27FEBE5D-E1FB-47C7-883F-59D29A74BCBA}|React App\\React App.csproj|c:\\users\\nblanco\\desktop\\study\\react app\\appcode\\models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27FEBE5D-E1FB-47C7-883F-59D29A74BCBA}|React App\\React App.csproj|solutionrelative:react app\\appcode\\models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27FEBE5D-E1FB-47C7-883F-59D29A74BCBA}|React App\\React App.csproj|c:\\users\\nblanco\\desktop\\study\\react app\\services\\tradeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27FEBE5D-E1FB-47C7-883F-59D29A74BCBA}|React App\\React App.csproj|solutionrelative:react app\\services\\tradeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27FEBE5D-E1FB-47C7-883F-59D29A74BCBA}|React App\\React App.csproj|c:\\users\\nblanco\\desktop\\study\\react app\\controllers\\searchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27FEBE5D-E1FB-47C7-883F-59D29A74BCBA}|React App\\React App.csproj|solutionrelative:react app\\controllers\\searchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27FEBE5D-E1FB-47C7-883F-59D29A74BCBA}|React App\\React App.csproj|c:\\users\\nblanco\\desktop\\study\\react app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27FEBE5D-E1FB-47C7-883F-59D29A74BCBA}|React App\\React App.csproj|solutionrelative:react app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27FEBE5D-E1FB-47C7-883F-59D29A74BCBA}|React App\\React App.csproj|c:\\users\\nblanco\\desktop\\study\\react app\\extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27FEBE5D-E1FB-47C7-883F-59D29A74BCBA}|React App\\React App.csproj|solutionrelative:react app\\extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27FEBE5D-E1FB-47C7-883F-59D29A74BCBA}|React App\\React App.csproj|c:\\users\\nblanco\\desktop\\study\\react app\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{27FEBE5D-E1FB-47C7-883F-59D29A74BCBA}|React App\\React App.csproj|solutionrelative:react app\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27FEBE5D-E1FB-47C7-883F-59D29A74BCBA}|React App\\React App.csproj|c:\\users\\nblanco\\desktop\\study\\react app\\extensions\\searchparametersextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27FEBE5D-E1FB-47C7-883F-59D29A74BCBA}|React App\\React App.csproj|solutionrelative:react app\\extensions\\searchparametersextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27FEBE5D-E1FB-47C7-883F-59D29A74BCBA}|React App\\React App.csproj|c:\\users\\nblanco\\desktop\\study\\react app\\appcode\\commands\\concretes\\getsearchparameterscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27FEBE5D-E1FB-47C7-883F-59D29A74BCBA}|React App\\React App.csproj|solutionrelative:react app\\appcode\\commands\\concretes\\getsearchparameterscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27FEBE5D-E1FB-47C7-883F-59D29A74BCBA}|React App\\React App.csproj|c:\\users\\nblanco\\desktop\\study\\react app\\appcode\\commands\\concretes\\getsearchtermparametercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27FEBE5D-E1FB-47C7-883F-59D29A74BCBA}|React App\\React App.csproj|solutionrelative:react app\\appcode\\commands\\concretes\\getsearchtermparametercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27FEBE5D-E1FB-47C7-883F-59D29A74BCBA}|React App\\React App.csproj|c:\\users\\nblanco\\desktop\\study\\react app\\appcode\\commands\\concretes\\getcategoryparametercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27FEBE5D-E1FB-47C7-883F-59D29A74BCBA}|React App\\React App.csproj|solutionrelative:react app\\appcode\\commands\\concretes\\getcategoryparametercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27FEBE5D-E1FB-47C7-883F-59D29A74BCBA}|React App\\React App.csproj|c:\\users\\nblanco\\desktop\\study\\react app\\appcode\\models\\trade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27FEBE5D-E1FB-47C7-883F-59D29A74BCBA}|React App\\React App.csproj|solutionrelative:react app\\appcode\\models\\trade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27FEBE5D-E1FB-47C7-883F-59D29A74BCBA}|React App\\React App.csproj|c:\\users\\nblanco\\desktop\\study\\react app\\services\\iserviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27FEBE5D-E1FB-47C7-883F-59D29A74BCBA}|React App\\React App.csproj|solutionrelative:react app\\services\\iserviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27FEBE5D-E1FB-47C7-883F-59D29A74BCBA}|React App\\React App.csproj|c:\\users\\nblanco\\desktop\\study\\react app\\services\\itradeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27FEBE5D-E1FB-47C7-883F-59D29A74BCBA}|React App\\React App.csproj|solutionrelative:react app\\services\\itradeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27FEBE5D-E1FB-47C7-883F-59D29A74BCBA}|React App\\React App.csproj|c:\\users\\nblanco\\desktop\\study\\react app\\appcode\\commands\\models\\searchcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27FEBE5D-E1FB-47C7-883F-59D29A74BCBA}|React App\\React App.csproj|solutionrelative:react app\\appcode\\commands\\models\\searchcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27FEBE5D-E1FB-47C7-883F-59D29A74BCBA}|React App\\React App.csproj|c:\\users\\nblanco\\desktop\\study\\react app\\clientapp\\src\\store\\store.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{27FEBE5D-E1FB-47C7-883F-59D29A74BCBA}|React App\\React App.csproj|solutionrelative:react app\\clientapp\\src\\store\\store.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27FEBE5D-E1FB-47C7-883F-59D29A74BCBA}|React App\\React App.csproj|c:\\users\\nblanco\\desktop\\study\\react app\\clientapp\\src\\setupproxy.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{27FEBE5D-E1FB-47C7-883F-59D29A74BCBA}|React App\\React App.csproj|solutionrelative:react app\\clientapp\\src\\setupproxy.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 11,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{4a8466fe-5a05-4f81-ad45-7d7c1316817e}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\nblanco\\Desktop\\Study\\React App\\appsettings.json",
+              "RelativeDocumentMoniker": "React App\\appsettings.json",
+              "ToolTip": "C:\\Users\\nblanco\\Desktop\\Study\\React App\\appsettings.json",
+              "RelativeToolTip": "React App\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-11T23:13:32.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\nblanco\\Desktop\\Study\\React App\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "React App\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\nblanco\\Desktop\\Study\\React App\\appsettings.Development.json",
+              "RelativeToolTip": "React App\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-11T23:06:10.216Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SearchParametersExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\nblanco\\Desktop\\Study\\React App\\Extensions\\SearchParametersExtensions.cs",
+              "RelativeDocumentMoniker": "React App\\Extensions\\SearchParametersExtensions.cs",
+              "ToolTip": "C:\\Users\\nblanco\\Desktop\\Study\\React App\\Extensions\\SearchParametersExtensions.cs",
+              "RelativeToolTip": "React App\\Extensions\\SearchParametersExtensions.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T22:32:29.417Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "GetCategoryParameterCommand.cs",
+              "DocumentMoniker": "C:\\Users\\nblanco\\Desktop\\Study\\React App\\AppCode\\Commands\\Concretes\\GetCategoryParameterCommand.cs",
+              "RelativeDocumentMoniker": "React App\\AppCode\\Commands\\Concretes\\GetCategoryParameterCommand.cs",
+              "ToolTip": "C:\\Users\\nblanco\\Desktop\\Study\\React App\\AppCode\\Commands\\Concretes\\GetCategoryParameterCommand.cs",
+              "RelativeToolTip": "React App\\AppCode\\Commands\\Concretes\\GetCategoryParameterCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T05:01:38.945Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "GetSearchParametersCommand.cs",
+              "DocumentMoniker": "C:\\Users\\nblanco\\Desktop\\Study\\React App\\AppCode\\Commands\\Concretes\\GetSearchParametersCommand.cs",
+              "RelativeDocumentMoniker": "React App\\AppCode\\Commands\\Concretes\\GetSearchParametersCommand.cs",
+              "ToolTip": "C:\\Users\\nblanco\\Desktop\\Study\\React App\\AppCode\\Commands\\Concretes\\GetSearchParametersCommand.cs",
+              "RelativeToolTip": "React App\\AppCode\\Commands\\Concretes\\GetSearchParametersCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T04:56:39.918Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Trade.cs",
+              "DocumentMoniker": "C:\\Users\\nblanco\\Desktop\\Study\\React App\\AppCode\\Models\\Trade.cs",
+              "RelativeDocumentMoniker": "React App\\AppCode\\Models\\Trade.cs",
+              "ToolTip": "C:\\Users\\nblanco\\Desktop\\Study\\React App\\AppCode\\Models\\Trade.cs",
+              "RelativeToolTip": "React App\\AppCode\\Models\\Trade.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T04:53:07.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "GetSearchTermParameterCommand.cs",
+              "DocumentMoniker": "C:\\Users\\nblanco\\Desktop\\Study\\React App\\AppCode\\Commands\\Concretes\\GetSearchTermParameterCommand.cs",
+              "RelativeDocumentMoniker": "React App\\AppCode\\Commands\\Concretes\\GetSearchTermParameterCommand.cs",
+              "ToolTip": "C:\\Users\\nblanco\\Desktop\\Study\\React App\\AppCode\\Commands\\Concretes\\GetSearchTermParameterCommand.cs",
+              "RelativeToolTip": "React App\\AppCode\\Commands\\Concretes\\GetSearchTermParameterCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T04:19:40.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "SearchCommand.cs",
+              "DocumentMoniker": "C:\\Users\\nblanco\\Desktop\\Study\\React App\\AppCode\\Commands\\Models\\SearchCommand.cs",
+              "RelativeDocumentMoniker": "React App\\AppCode\\Commands\\Models\\SearchCommand.cs",
+              "ToolTip": "C:\\Users\\nblanco\\Desktop\\Study\\React App\\AppCode\\Commands\\Models\\SearchCommand.cs",
+              "RelativeToolTip": "React App\\AppCode\\Commands\\Models\\SearchCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T04:04:29.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Service.cs",
+              "DocumentMoniker": "C:\\Users\\nblanco\\Desktop\\Study\\React App\\AppCode\\Models\\Service.cs",
+              "RelativeDocumentMoniker": "React App\\AppCode\\Models\\Service.cs",
+              "ToolTip": "C:\\Users\\nblanco\\Desktop\\Study\\React App\\AppCode\\Models\\Service.cs",
+              "RelativeToolTip": "React App\\AppCode\\Models\\Service.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T03:59:59.543Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ServiceService.cs",
+              "DocumentMoniker": "C:\\Users\\nblanco\\Desktop\\Study\\React App\\Services\\ServiceService.cs",
+              "RelativeDocumentMoniker": "React App\\Services\\ServiceService.cs",
+              "ToolTip": "C:\\Users\\nblanco\\Desktop\\Study\\React App\\Services\\ServiceService.cs",
+              "RelativeToolTip": "React App\\Services\\ServiceService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAABbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T03:56:07.854Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IServiceService.cs",
+              "DocumentMoniker": "C:\\Users\\nblanco\\Desktop\\Study\\React App\\Services\\IServiceService.cs",
+              "RelativeDocumentMoniker": "React App\\Services\\IServiceService.cs",
+              "ToolTip": "C:\\Users\\nblanco\\Desktop\\Study\\React App\\Services\\IServiceService.cs",
+              "RelativeToolTip": "React App\\Services\\IServiceService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T03:54:32.572Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ITradeService.cs",
+              "DocumentMoniker": "C:\\Users\\nblanco\\Desktop\\Study\\React App\\Services\\ITradeService.cs",
+              "RelativeDocumentMoniker": "React App\\Services\\ITradeService.cs",
+              "ToolTip": "C:\\Users\\nblanco\\Desktop\\Study\\React App\\Services\\ITradeService.cs",
+              "RelativeToolTip": "React App\\Services\\ITradeService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAABOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T03:54:08.058Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TradeService.cs",
+              "DocumentMoniker": "C:\\Users\\nblanco\\Desktop\\Study\\React App\\Services\\TradeService.cs",
+              "RelativeDocumentMoniker": "React App\\Services\\TradeService.cs",
+              "ToolTip": "C:\\Users\\nblanco\\Desktop\\Study\\React App\\Services\\TradeService.cs",
+              "RelativeToolTip": "React App\\Services\\TradeService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAABbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T03:53:44.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SearchController.cs",
+              "DocumentMoniker": "C:\\Users\\nblanco\\Desktop\\Study\\React App\\Controllers\\SearchController.cs",
+              "RelativeDocumentMoniker": "React App\\Controllers\\SearchController.cs",
+              "ToolTip": "C:\\Users\\nblanco\\Desktop\\Study\\React App\\Controllers\\SearchController.cs",
+              "RelativeToolTip": "React App\\Controllers\\SearchController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T00:01:58.137Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Store.js",
+              "DocumentMoniker": "C:\\Users\\nblanco\\Desktop\\Study\\React App\\ClientApp\\src\\store\\Store.js",
+              "RelativeDocumentMoniker": "React App\\ClientApp\\src\\store\\Store.js",
+              "ToolTip": "C:\\Users\\nblanco\\Desktop\\Study\\React App\\ClientApp\\src\\store\\Store.js",
+              "RelativeToolTip": "React App\\ClientApp\\src\\store\\Store.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-10-10T23:25:33.844Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "setupProxy.js",
+              "DocumentMoniker": "C:\\Users\\nblanco\\Desktop\\Study\\React App\\ClientApp\\src\\setupProxy.js",
+              "RelativeDocumentMoniker": "React App\\ClientApp\\src\\setupProxy.js",
+              "ToolTip": "C:\\Users\\nblanco\\Desktop\\Study\\React App\\ClientApp\\src\\setupProxy.js",
+              "RelativeToolTip": "React App\\ClientApp\\src\\setupProxy.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2023-10-26T01:56:39.692Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ServiceCollectionExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\nblanco\\Desktop\\Study\\React App\\Extensions\\ServiceCollectionExtensions.cs",
+              "RelativeDocumentMoniker": "React App\\Extensions\\ServiceCollectionExtensions.cs",
+              "ToolTip": "C:\\Users\\nblanco\\Desktop\\Study\\React App\\Extensions\\ServiceCollectionExtensions.cs",
+              "RelativeToolTip": "React App\\Extensions\\ServiceCollectionExtensions.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-10-26T01:39:55.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\nblanco\\Desktop\\Study\\React App\\Program.cs",
+              "RelativeDocumentMoniker": "React App\\Program.cs",
+              "ToolTip": "C:\\Users\\nblanco\\Desktop\\Study\\React App\\Program.cs",
+              "RelativeToolTip": "React App\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-10-26T01:39:52.694Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

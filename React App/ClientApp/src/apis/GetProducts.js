@@ -4,7 +4,7 @@
  */
 async function getProducts(filters) {
   const queryParams = new URLSearchParams(filters).toString();
-  const url = `/home/getproducts?${queryParams}`;
+  const url = `/search/getresults?${queryParams}`;
 
   const promise = await fetch(url);
   if (!promise.ok) {

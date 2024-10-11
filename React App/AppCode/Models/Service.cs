@@ -1,37 +1,37 @@
-﻿namespace React_App.AppCode.Components.Product.Models
+﻿namespace React_App.AppCode.Models
 {
     /// <summary>
-    /// Model to map the properties for the product concept
+    /// Model to map the properties for the service concept
     /// </summary>
-    public class Product
+    public class Service
     {
         /// <summary>
-        /// Gets or Sets the identifier of the product
+        /// Gets or Sets the identifier of the service
         /// </summary>
-        public string ProductId { get; set; } = string.Empty;
+        public string ServiceId { get; set; } = string.Empty;
 
         /// <summary>
-        /// Gets or Sets the name of the product
+        /// Gets or Sets the name of the service
         /// </summary>
         public string Name { get; set; } = string.Empty;
 
         /// <summary>
-        /// Gets or Sets the price of the product
+        /// Gets or Sets the main image of the service
         /// </summary>
-        public decimal Price { get; set; } = 0;
+        public string MainImage { get; set; } = string.Empty;
 
         /// <summary>
-        /// Gets or Sets the thumbnail image of the product
+        /// Gets or Sets the thumbnail image of the service
         /// </summary>
         public string Thumbnail { get; set; } = string.Empty;
 
         /// <summary>
-        /// Gets or Sets the category of the product
+        /// Gets or Sets the category of the service
         /// </summary>
         public string Category { get; set; } = string.Empty;
 
         /// <summary>
-        /// Gets or Sets the category of the product
+        /// Gets or Sets the category of the service
         /// </summary>
         public string Description { get; set; } = string.Empty;
     }
